@@ -5,6 +5,8 @@ export default function Product({title, description, isNew, img: {desktop, mobil
   return (
     <div>
       <picture>
+        <source media='(max-width: 768px)' srcSet={tablet}/>
+        <source media='(max-width: 375px)' srcSet={mobile}/>
       <img src={desktop} alt={title} width={540} height={560}/>
       </picture>
 
