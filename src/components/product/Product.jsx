@@ -1,13 +1,13 @@
 import React from 'react'
 import Button from '../button/Button'
 
-export default function Product({title, description, isNew, img: {desktop, mobile, tablet}}) {
+export default function Product({title, description, isNew, img: {desktop, tablet, mobile}}) {
   return (
     <div>
       <picture>
-        <source media='(max-width: 768px)' srcSet={tablet}/>
         <source media='(max-width: 375px)' srcSet={mobile}/>
-      <img src={desktop} alt={title} width={540} height={560}/>
+        <source media='(max-width: 768px)' srcSet={tablet}/>
+      <img src={desktop} alt={title}/>
       </picture>
 
       <div>
